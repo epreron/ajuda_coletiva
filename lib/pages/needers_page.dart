@@ -1,3 +1,4 @@
+import 'package:ajuda_coletiva/widgets/askHelpCart.dart';
 import 'package:flutter/material.dart';
 
 
@@ -27,6 +28,10 @@ class _State extends State<NeedersPage> {
     });
   }
  
+List productList(){
+  return products;
+}
+
   @override
   Widget build(BuildContext context) {
         return Scaffold(
@@ -267,6 +272,12 @@ class _State extends State<NeedersPage> {
                     textAlign: TextAlign.center,
                   ),
                   onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ),
+                  );
                   },
                 ),
               ),

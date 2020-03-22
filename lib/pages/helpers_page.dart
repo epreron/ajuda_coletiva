@@ -96,21 +96,7 @@ class _State extends State<HelpersPage> {
             SizedBox(
               height: 10,
             ),
-                 TextFormField(
-                  // autofocus: true,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    labelText: "Quantos dias irá durar",
-                    labelStyle: TextStyle(
-                      color: Colors.black38,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 20,
-                    ),
-                  ),
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
+
             SizedBox(
               height: 10,
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ajuda_coletiva/pages/needers_page.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-final products = productList;
+//final products = productList;
 
 Widget cardItem() {
   return Card(
@@ -51,7 +51,7 @@ Widget cardItem() {
               height: 80,
               alignment: Alignment.topCenter,
               child: Text(
-                  products),
+                  "product"),
             ),
             Container(
               alignment: Alignment.bottomLeft,

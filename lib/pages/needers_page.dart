@@ -1,3 +1,4 @@
+import 'package:ajuda_coletiva/models/ask_item_needer.dart';
 import 'package:ajuda_coletiva/widgets/askHelpCart.dart';
 import 'package:flutter/material.dart';
 
@@ -27,10 +28,23 @@ class _State extends State<NeedersPage> {
       productsQtd.insert(0, productQtdController.text);
     });
   }
- 
- void productList(){
-   //  return products;
-}
+  
+
+
+ void createPosr(){    
+   AskItemNeeder newItem = AskItemNeeder(); 
+   User newUser = User(userName: nameController.text,
+                        userAge: ageController.text,
+                        userContactPhone: familyController.text,
+                        userFamilyDependents: familyController.text);
+   
+   newItem.title = "teste";
+   
+ final userName = newUser.userName ;
+ final userAge =  newUser.userAge ;
+ final usePhone = newUser.userContactPhone;
+  return print("registrado : titulo:${newItem.title}, nome :$userName, idade: $userAge, contato: $usePhone ");
+ }
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +77,7 @@ class _State extends State<NeedersPage> {
                 ),
                 TextFormField(
                   // autofocus: true,
+                  controller: ageController,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     labelText: "Idade",
@@ -80,6 +95,7 @@ class _State extends State<NeedersPage> {
                   height: 10,
                 ),
                 TextFormField(
+                  controller: foneNumberController,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     labelText: "Telemovel",
@@ -272,6 +288,7 @@ class _State extends State<NeedersPage> {
                     textAlign: TextAlign.center,
                   ),
                   onPressed: () {
+                    createPosr();
                     Navigator.push(
                     context,
                     MaterialPageRoute(
